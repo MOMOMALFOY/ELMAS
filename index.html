@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elmas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+</head>
+<body>
+    <div class="page-reveal" aria-hidden="true">
+        <img class="page-reveal-star" src="etoile4.png" alt="" role="presentation" />
+    </div>
+
+    <header class="site-header">
+        <button class="burger-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+        </button>
+
+
+
+    </header>
+    <nav id="mobile-menu" class="mobile-menu" hidden>
+        <ul>
+            <li><a href="#">Nouveautés</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Bijoux</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="hero">
+        <div class="hero-content">
+            <img class="hero-logo" src="elmas.png" alt="Elmas" />
+            <div class="hero-image">
+                <img src="u4363189216_close-up_fashion_photos_of_a_model_wearing_minima_6eb11424-0984-4d44-8dfd-25a8deb40cd5_0-Photoroom.png" alt="Modèle portant un bijou" />
+            </div>
+        </div>
+    </main>
+
+    <!-- Collection Intro -->
+    <section class="collection-intro" aria-labelledby="collection-intro-title">
+        <div class="collection-intro__inner">
+            <div class="collection-intro__cta">
+                <h2 id="collection-intro-title" class="collection-intro__title">Héritage scintillant</h2>
+                <p class="collection-intro__subtitle">Les pièces emblématiques à découvrir.</p>
+                <button class="collection-intro__button" type="button">Discover</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+        <img src="etoile4.png" alt="" role="presentation" />
+    </div>
+
+    <!-- Collection Showcase -->
+    <section class="collection-showcase" aria-labelledby="collection-showcase-title">
+        <div class="collection-showcase__inner">
+            <h2 id="collection-showcase-title" class="collection-showcase__title">About us</h2>
+            <div class="collection-showcase__about">
+                <div class="collection-showcase__about-media">
+                    <img src="imgbague1.png" alt="Couple enlacé mettant en avant une bague Elmas" />
+                </div>
+                <div class="collection-showcase__about-content">
+                    <p class="collection-showcase__eyebrow">Maison Elmas</p>
+                    <h3 class="collection-showcase__headline">L'émotion façonnée dans l'or</h3>
+                    <p class="collection-showcase__description">
+                        Chez Elmas, chaque pièce raconte une promesse : celle d'un éclat intemporel ciselé à la main,
+                        inspiré par les gestes tendres et les instants suspendus. Nos artisans mêlent or solaire et
+                        pierres lumineuses pour révéler des créations aussi délicates que durables.
+                    </p>
+                    <p class="collection-showcase__description">
+                        Nous imaginons des bijoux qui accompagnent les histoires d'amour et les souvenirs précieux,
+                        en laissant chaque détail respirer le luxe discret que nous chérissons.
+                    </p>
+                </div>
+            </div>
+            <div class="collection-showcase__items">
+                <article class="collection-showcase__card">
+                    <div class="collection-showcase__media">
+                        <lottie-player
+                            src="animation.json"
+                            background="transparent"
+                            speed="1"
+                            autoplay
+                            loop
+                            aria-label="Bague solitaire ovale en or jaune">
+                        </lottie-player>
+                    </div>
+                    <p class="collection-showcase__caption">
+                        Solitaire Éclipse
+                        <span>Sertissage ovale magnifié par l'or solaire.</span>
+                    </p>
+                </article>
+                <figure class="collection-showcase__still">
+                    <img src="blondesaiyan.png" alt="Portrait Elmas" />
+                    <figcaption>Portrait Elmas — éclat solaire</figcaption>
+                </figure>
+                <article class="collection-showcase__card">
+                    <div class="collection-showcase__media">
+                        <lottie-player
+                            src="diamond.json"
+                            background="transparent"
+                            speed="1"
+                            autoplay
+                            loop
+                            aria-label="Boucles d'oreilles diamant serti halo">
+                        </lottie-player>
+                    </div>
+                    <p class="collection-showcase__caption">
+                        Halo Lumina
+                        <span>Éclat diffus d'un halo de lumière céleste.</span>
+                    </p>
+                </article>
+                <figure class="collection-showcase__still collection-showcase__still--tail">
+                    <img src="ccarée.png" alt="Profil Elmas" />
+                    <figcaption>Profil Elmas — élégance nocturne</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+        <img src="etoile4.png" alt="" role="presentation" />
+    </div>
+
+    <!-- Collection Items -->
+    <section class="collection-items" aria-labelledby="collection-items-title">
+        <div class="collection-items__inner">
+            <h2 id="collection-items-title" class="collection-items__title">Sélection Prestige</h2>
+            <p class="collection-items__subtitle">Une capsule de bijoux iconiques qui illuminent chaque geste.</p>
+            <div class="collection-items__grid">
+                <article class="collection-card">
+                    <div class="collection-card__media">
+                        <img src="u4363189216_an_oval_diamond_engagement_ring_with_a_yellow_gol_6ad90f9b-2e7c-435c-9b46-9f28f71298d5_3-removebg-preview.png" alt="Bague solitaire ovale en or jaune" />
+                    </div>
+                    <h3 class="collection-card__title">Solitaire Éclipse</h3>
+                    <p class="collection-card__price">19,99&nbsp;€</p>
+                </article>
+                <article class="collection-card">
+                    <div class="collection-card__media">
+                        <img src="Screenshot_2-removebg-preview.png" alt="Boucles d'oreilles diamant serti halo" />
+                    </div>
+                    <h3 class="collection-card__title">Halo Lumina</h3>
+                    <p class="collection-card__price">24,99&nbsp;€</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const burgerButton = document.querySelector('.burger-button');
+        const mobileMenu = document.querySelector('#mobile-menu');
+        const pageReveal = document.querySelector('.page-reveal');
+
+        if (pageReveal) {
+            window.addEventListener('load', () => {
+                const REVEAL_SPIN_DURATION = 1000;
+                window.setTimeout(() => {
+                    pageReveal.classList.add('is-expanding');
+                }, REVEAL_SPIN_DURATION);
+            });
+
+            pageReveal.addEventListener('animationend', (event) => {
+                if (event.animationName === 'revealBackdropFade') {
+                    pageReveal.remove();
+                }
+            });
+        }
+
+        if (burgerButton && mobileMenu) {
+            const setMenuState = (open) => {
+                burgerButton.setAttribute('aria-expanded', String(open));
+                mobileMenu.hidden = !open;
+                document.body.classList.toggle('menu-open', open);
+            };
+
+            burgerButton.addEventListener('click', () => {
+                const isOpen = burgerButton.getAttribute('aria-expanded') === 'true';
+                setMenuState(!isOpen);
+            });
+
+            mobileMenu.addEventListener('click', (event) => {
+                if (event.target.matches('a')) {
+                    setMenuState(false);
+                } else if (event.target === mobileMenu) {
+                    setMenuState(false);
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 980 && burgerButton.getAttribute('aria-expanded') === 'true') {
+                    setMenuState(false);
+                }
+            });
+        }
+
+        const heroSection = document.querySelector('.hero');
+        const heroImage = document.querySelector('.hero-image');
+        const HERO_BASE_HEIGHT = 66;
+        const HERO_MIN_HEIGHT = 55;
+        const HERO_HEIGHT_DELTA = HERO_BASE_HEIGHT - HERO_MIN_HEIGHT;
+        let heroScrollStart = 0;
+        let heroScrollRange = 1;
+        let heroTicking = false;
+
+        const clamp01 = (value) => Math.min(Math.max(value, 0), 1);
+        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+        const parallaxElements = [];
+        let parallaxTicking = false;
+
+        const recalcHeroMetrics = () => {
+            if (!heroSection) {
+                return;
+            }
+
+            const rect = heroSection.getBoundingClientRect();
+            heroScrollStart = window.scrollY + rect.top;
+            heroScrollRange = Math.max(window.innerHeight * 0.9, 1);
+        };
+
+        const updateHeroParallax = () => {
+            if (!heroSection || !heroImage) {
+                heroTicking = false;
+                return;
+            }
+
+            const scrollY = window.scrollY;
+            const progressRaw = (scrollY - heroScrollStart) / heroScrollRange;
+            const progress = clamp01(progressRaw);
+
+            heroImage.style.setProperty('--hero-shift-progress', progress.toFixed(3));
+
+            if (heroSection) {
+                const logoOpacity = 1 - clamp01(progress * 1.05);
+                const logoShift = `${(progress * 42).toFixed(1)}px`;
+                heroSection.style.setProperty('--hero-logo-opacity', logoOpacity.toFixed(3));
+                heroSection.style.setProperty('--hero-logo-shift', logoShift);
+            }
+
+            const heroHeight = HERO_BASE_HEIGHT - HERO_HEIGHT_DELTA * progress;
+            heroSection.style.setProperty('--hero-height', `${heroHeight.toFixed(2)}vh`);
+
+            heroTicking = false;
+        };
+
+        const updateParallaxElements = () => {
+            if (parallaxElements.length === 0) {
+                parallaxTicking = false;
+                return;
+            }
+
+            parallaxTicking = false;
+        };
+
+        const onScroll = () => {
+            if (!heroTicking) {
+                heroTicking = true;
+                window.requestAnimationFrame(updateHeroParallax);
+            }
+
+            if (!parallaxTicking && parallaxElements.length > 0) {
+                parallaxTicking = true;
+                window.requestAnimationFrame(updateParallaxElements);
+            }
+        };
+
+        const handleResize = () => {
+            recalcHeroMetrics();
+            updateHeroParallax();
+        if (parallaxElements.length > 0) {
+            updateParallaxElements();
+        }
+
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', handleResize);
+
+        recalcHeroMetrics();
+        heroSection?.style.setProperty('--hero-height', `${HERO_BASE_HEIGHT}vh`);
+        updateHeroParallax();
+        if (parallaxElements.length > 0) {
+            updateParallaxElements();
+        }
+
+        const showcaseCards = document.querySelectorAll('.collection-showcase__card');
+        if (showcaseCards.length > 0) {
+            if ('IntersectionObserver' in window) {
+                const showcaseObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        entry.target.classList.toggle('is-visible', entry.isIntersecting);
+                    });
+                }, { threshold: 0.4 });
+
+                showcaseCards.forEach((card) => showcaseObserver.observe(card));
+            } else {
+                showcaseCards.forEach((card) => card.classList.add('is-visible'));
+            }
+        }
+    </script>
+</body>
+</html>
+
