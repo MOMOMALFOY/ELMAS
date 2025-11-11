@@ -152,6 +152,86 @@
         </div>
     </section>
 
+    <div class="section-divider" aria-hidden="true">
+        <img src="etoile4.png" alt="" role="presentation" />
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials" aria-labelledby="testimonials-title">
+        <div class="testimonials__inner">
+            <header class="testimonials__header">
+                <p class="testimonials__eyebrow">Avis & confidences</p>
+                <h2 id="testimonials-title" class="testimonials__title">Elles et ils racontent Elmas</h2>
+                <p class="testimonials__subtitle">
+                    Moments précieux, déclarations spontanées et souvenirs sertis d’or partagés par notre communauté.
+                </p>
+            </header>
+            <aside class="testimonials__summary js-scroll-fade" aria-label="Note moyenne des avis clients">
+                <div class="testimonials__summary-score">
+                    <span class="testimonials__summary-value">4,7</span>
+                    <span class="testimonials__summary-stars" style="--summary-rating: 4.7;" aria-hidden="true"></span>
+                </div>
+                <p class="testimonials__summary-caption">
+                    Moyenne calculée sur <strong>5&nbsp;716 avis vérifiés</strong> — actualisée chaque saison.
+                </p>
+            </aside>
+            <div class="testimonials__grid">
+                <article class="testimonial-card">
+                    <div class="testimonial-card__rating" style="--rating:5;" aria-label="Note 5 sur 5">
+                        <div class="testimonial-card__stars" aria-hidden="true"></div>
+                        <span class="testimonial-card__rating-value">5,0</span>
+                    </div>
+                    <div class="testimonial-card__quote">
+                        « J’ai dit “oui” entourée d’un éclat solaire. Cette bague est devenue le symbole de notre promesse. »
+                    </div>
+                    <footer class="testimonial-card__footer">
+                        <p class="testimonial-card__name">Claire & Julien</p>
+                        <p class="testimonial-card__meta">Paris, cérémonie d’automne</p>
+                    </footer>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card__rating" style="--rating:5;" aria-label="Note 5 sur 5">
+                        <div class="testimonial-card__stars" aria-hidden="true"></div>
+                        <span class="testimonial-card__rating-value">5,0</span>
+                    </div>
+                    <div class="testimonial-card__quote">
+                        « La finesse du sertissage et la délicatesse du halo reflètent parfaitement ma personnalité. »
+                    </div>
+                    <footer class="testimonial-card__footer">
+                        <p class="testimonial-card__name">Imane</p>
+                        <p class="testimonial-card__meta">Commande atelier sur-mesure</p>
+                    </footer>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card__rating" style="--rating:5;" aria-label="Note 5 sur 5">
+                        <div class="testimonial-card__stars" aria-hidden="true"></div>
+                        <span class="testimonial-card__rating-value">5,0</span>
+                    </div>
+                    <div class="testimonial-card__quote">
+                        « Chaque détail respire l’artisanat ; offrir ce pendentif à ma mère a illuminé notre soirée. »
+                    </div>
+                    <footer class="testimonial-card__footer">
+                        <p class="testimonial-card__name">Elias</p>
+                        <p class="testimonial-card__meta">Lyon, fête de famille</p>
+                    </footer>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card__rating" style="--rating:5;" aria-label="Note 5 sur 5">
+                        <div class="testimonial-card__stars" aria-hidden="true"></div>
+                        <span class="testimonial-card__rating-value">5,0</span>
+                    </div>
+                    <div class="testimonial-card__quote">
+                        « Mon bracelet personnalisé a été livré avec une attention exquise, tout comme l’accueil en boutique. »
+                    </div>
+                    <footer class="testimonial-card__footer">
+                        <p class="testimonial-card__name">Aurélie</p>
+                        <p class="testimonial-card__meta">Nice, collection Atelier Lumière</p>
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </section>
+
 
     <script>
         const burgerButton = document.querySelector('.burger-button');
@@ -301,6 +381,31 @@
                 showcaseCards.forEach((card) => showcaseObserver.observe(card));
             } else {
                 showcaseCards.forEach((card) => card.classList.add('is-visible'));
+            }
+        }
+
+        const scrollFadeTargets = document.querySelectorAll('article, figure');
+        scrollFadeTargets.forEach((element) => {
+            if (!element.classList.contains('js-scroll-fade')) {
+                element.classList.add('js-scroll-fade');
+            }
+        });
+
+        const fadeElements = document.querySelectorAll('.js-scroll-fade');
+        if (fadeElements.length > 0) {
+            if ('IntersectionObserver' in window) {
+                const fadeObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-fade-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+
+                fadeElements.forEach((element) => fadeObserver.observe(element));
+            } else {
+                fadeElements.forEach((element) => element.classList.add('is-fade-visible'));
             }
         }
     </script>
