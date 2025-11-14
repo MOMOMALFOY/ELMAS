@@ -12,7 +12,10 @@
 </head>
 <body>
     <div class="page-reveal" aria-hidden="true">
-        <img class="page-reveal-star" src="etoile4.png" alt="" role="presentation" />
+        <div class="page-reveal__content">
+            <img class="page-reveal-star" src="etoile4.png" alt="" role="presentation" />
+            <p class="page-reveal__text">Chargement...</p>
+        </div>
     </div>
 
     <header class="site-header">
@@ -20,17 +23,35 @@
             <span></span>
             <span></span>
         </button>
-
-
-
     </header>
+
+    <!-- Navbar desktop en capsule -->
+    <nav class="desktop-navbar" aria-label="Navigation principale">
+        <div class="desktop-navbar__container">
+            <a href="#top" class="desktop-navbar__logo">Elmas</a>
+            <ul class="desktop-navbar__menu">
+                <li><a href="#top">Accueil</a></li>
+                <li><a href="#collection-items">Sélection Prestige</a></li>
+                <li><a href="#collection-showcase-title">À propos</a></li>
+                <li><a href="#testimonials-title">Avis</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#site-footer-title">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Bouton retour en haut (mobile uniquement) -->
+    <button class="scroll-to-top" aria-label="Retour en haut de la page" title="Retour en haut">
+        <span>↑</span>
+    </button>
     <nav id="mobile-menu" class="mobile-menu" hidden>
         <ul>
-            <li><a href="#">Nouveautés</a></li>
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">Bijoux</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#top">Accueil</a></li>
+            <li><a href="#collection-items">Sélection Prestige</a></li>
+            <li><a href="#collection-showcase-title">À propos</a></li>
+            <li><a href="#testimonials-title">Avis</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#site-footer-title">Contact</a></li>
         </ul>
     </nav>
     <main class="hero">
@@ -48,7 +69,7 @@
             <div class="collection-intro__cta">
                 <h2 id="collection-intro-title" class="collection-intro__title">Héritage scintillant</h2>
                 <p class="collection-intro__subtitle">Les pièces emblématiques à découvrir.</p>
-                <button class="collection-intro__button" type="button">Discover</button>
+                    <button class="collection-intro__button" type="button">Voir les pièces</button>
             </div>
         </div>
     </section>
@@ -129,7 +150,7 @@
     </div>
 
     <!-- Collection Items -->
-    <section class="collection-items" aria-labelledby="collection-items-title">
+    <section id="collection-items" class="collection-items" aria-labelledby="collection-items-title">
         <div class="collection-items__inner">
             <h2 id="collection-items-title" class="collection-items__title">Sélection Prestige</h2>
             <p class="collection-items__subtitle">Une capsule de bijoux iconiques qui illuminent chaque geste.</p>
@@ -140,6 +161,10 @@
                     </div>
                     <h3 class="collection-card__title">Solitaire Éclipse</h3>
                     <p class="collection-card__price">19,99&nbsp;€</p>
+                    <div class="collection-card__actions">
+                        <a class="collection-card__details" href="solitaire-eclipse.html">Détails</a>
+                        <div id="product-component-1762883965635" class="shopify-buy__mount" aria-live="polite"></div>
+                    </div>
                 </article>
                 <article class="collection-card">
                     <div class="collection-card__media">
@@ -147,6 +172,32 @@
                     </div>
                     <h3 class="collection-card__title">Halo Lumina</h3>
                     <p class="collection-card__price">24,99&nbsp;€</p>
+                    <div class="collection-card__actions">
+                        <a class="collection-card__details" href="halo-lumina.html">Détails</a>
+                        <div id="product-component-1762968477223" class="shopify-buy__mount" aria-live="polite"></div>
+                    </div>
+                </article>
+                <article class="collection-card">
+                    <div class="collection-card__media">
+                        <img src="bracelet1.png" alt="Bracelet Aura en gros plan sur velours" />
+                    </div>
+                    <h3 class="collection-card__title">Bracelet Aura</h3>
+                    <p class="collection-card__price">29,99&nbsp;€</p>
+                    <div class="collection-card__actions">
+                        <a class="collection-card__details" href="bracelet-aura.html">Détails</a>
+                        <div id="product-component-1762968494773" class="shopify-buy__mount" aria-live="polite"></div>
+                    </div>
+                </article>
+                <article class="collection-card">
+                    <div class="collection-card__media">
+                        <img src="colier1.png" alt="Collier Solstice posé sur un écrin en velours" />
+                    </div>
+                    <h3 class="collection-card__title">Collier Solstice</h3>
+                    <p class="collection-card__price">34,99&nbsp;€</p>
+                    <div class="collection-card__actions">
+                        <a class="collection-card__details" href="collier-solstice.html">Détails</a>
+                        <div id="product-component-1762968507723" class="shopify-buy__mount" aria-live="polite"></div>
+                    </div>
                 </article>
             </div>
         </div>
@@ -232,15 +283,329 @@
         </div>
     </section>
 
+    <div class="section-divider" aria-hidden="true">
+        <img src="etoile4.png" alt="" role="presentation" />
+    </div>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+        <div class="faq__inner">
+            <header class="faq__header">
+                <p class="faq__eyebrow">FAQ Maison Elmas</p>
+                <h2 id="faq-title" class="faq__title">Vos questions les plus partagées</h2>
+                <p class="faq__subtitle">
+                    Quelques repères essentiels pour comprendre nos collections, nos services et l’expérience Elmas.
+                </p>
+            </header>
+            <div class="faq__list">
+                <details class="faq__item">
+                    <summary>Quels métaux et pierres utilisez-vous&nbsp;?</summary>
+                    <p>
+                        Nous sélectionnons des alliages d’or 18 carats et des pierres certifiées issues de filières responsables.
+                        Chaque pièce est accompagnée d’un certificat d’authenticité et d’un contrôle qualité individuel.
+                    </p>
+                </details>
+                <details class="faq__item">
+                    <summary>Proposez-vous des créations sur-mesure&nbsp;?</summary>
+                    <p>
+                        Oui, notre atelier accompagne vos projets personnalisés, du croquis à la mise à taille finale.
+                        Écrivez-nous via le formulaire de contact ou prenez rendez-vous en boutique pour démarrer votre création.
+                    </p>
+                </details>
+                <details class="faq__item">
+                    <summary>Quels sont vos délais de livraison&nbsp;?</summary>
+                    <p>
+                        Les pièces en stock sont expédiées sous 3 à 5 jours ouvrés en France métropolitaine.
+                        Les commandes atelier demandent de 3 à 5 semaines selon le degré de personnalisation.
+                    </p>
+                </details>
+                <details class="faq__item">
+                    <summary>Comment entretenir mon bijou Elmas&nbsp;?</summary>
+                    <p>
+                        Nous recommandons un nettoyage doux à l’eau savonneuse, suivi d’un séchage délicat.
+                        Un service de polissage annuel est offert pendant deux ans pour conserver tout l’éclat de votre pièce.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+        <img src="etoile4.png" alt="" role="presentation" />
+    </div>
+
+    <footer class="site-footer" aria-labelledby="site-footer-title">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <p id="site-footer-title" class="site-footer__logo">Elmas</p>
+                <p class="site-footer__tagline">
+                    Maison de joaillerie indépendante, dédiée aux histoires qui brillent aussi fort que l’or.
+                </p>
+            </div>
+            <div class="site-footer__contact">
+                <p class="site-footer__title">Contact</p>
+                <a href="mailto:contact@elmas-paris.com">contact@elmas-paris.com</a>
+                <a href="tel:+33184079010">+33&nbsp;1&nbsp;84&nbsp;07&nbsp;90&nbsp;10</a>
+                <span>28 rue des Orfèvres, 75003 Paris</span>
+                <span>Du mardi au samedi, 10h&nbsp;-&nbsp;19h</span>
+            </div>
+            <div class="site-footer__links">
+                <p class="site-footer__title">Suivez-nous</p>
+                <a href="#" aria-label="Instagram Elmas">Instagram</a>
+                <a href="#" aria-label="Pinterest Elmas">Pinterest</a>
+                <a href="#" aria-label="Newsletter Elmas">Newsletter</a>
+            </div>
+            <div class="site-footer__legal">
+                <span>© 2025 Elmas. Tous droits réservés.</span>
+                <span>
+                    <a href="#">Mentions légales</a> · <a href="#">Politique de confidentialité</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        (function () {
+            const scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+
+            const ensureScript = (callback) => {
+                const existing = document.querySelector(`script[src="${scriptURL}"]`);
+                if (existing) {
+                    if (existing.dataset.loaded === 'true') {
+                        callback();
+                    } else {
+                        existing.addEventListener('load', callback, { once: true });
+                    }
+                    return;
+                }
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = scriptURL;
+                script.onload = () => {
+                    script.dataset.loaded = 'true';
+                    callback();
+                };
+                document.head.appendChild(script);
+            };
+
+            const initShopify = () => {
+                if (!window.ShopifyBuy || !window.ShopifyBuy.UI) {
+                    return;
+                }
+
+                const productMounts = [
+                    { node: document.getElementById('product-component-1762883965635'), productId: '15173712413058' },
+                    { node: document.getElementById('product-component-1762968477223'), productId: '15173718409602' },
+                    { node: document.getElementById('product-component-1762968494773'), productId: '15177630089602' },
+                    { node: document.getElementById('product-component-1762968507723'), productId: '15177635266946' },
+                ].filter(({ node }) => node && node.dataset.shopifyMount !== 'ready');
+
+                if (productMounts.length === 0) {
+                    return;
+                }
+
+                const client = window.ShopifyBuy.buildClient({
+                    domain: 't1jq01-bd.myshopify.com',
+                    storefrontAccessToken: '8cd3f601d0ad9288d5f1449f676572e2',
+                });
+
+                const baseOptions = {
+                    product: {
+                        contents: {
+                            img: false,
+                            title: false,
+                            price: false,
+                            options: false,
+                        },
+                        text: {
+                            button: 'Ajouter au panier',
+                        },
+                        classes: {
+                            product: 'collection-card__buy',
+                            button: 'collection-card__buy-button',
+                        },
+                        styles: {
+                            product: {
+                                'max-width': '100%',
+                                'width': '100%',
+                                'margin': '0',
+                                'text-align': 'center',
+                            },
+                            button: {
+                                'background-color': '#161616',
+                                'background-image': 'linear-gradient(135deg, rgba(223, 189, 148, 0.26), rgba(223, 189, 148, 0.08))',
+                                'border': '1px solid rgba(255, 223, 189, 0.48)',
+                                'box-shadow': 'none',
+                                'padding': '12px 22px',
+                                'margin': '0',
+                                'border-radius': '0',
+                                'font-family': '"Poppins", sans-serif',
+                                'font-weight': '500',
+                                'letter-spacing': '0.22em',
+                                'text-transform': 'uppercase',
+                                'font-size': '0.75rem',
+                                'color': '#f8f2e7',
+                                'transition': 'border-color 0.3s ease, background 0.3s ease, transform 0.3s ease',
+                                ':hover': {
+                                    'background-image': 'linear-gradient(135deg, rgba(228, 198, 161, 0.4), rgba(228, 198, 161, 0.16))',
+                                    'border-color': 'rgba(255, 233, 205, 0.85)',
+                                    'transform': 'translateY(-1px)',
+                                },
+                                ':focus': {
+                                    'background-image': 'linear-gradient(135deg, rgba(228, 198, 161, 0.4), rgba(228, 198, 161, 0.16))',
+                                    'border-color': 'rgba(255, 233, 205, 0.85)',
+                                },
+                            },
+                        },
+                    },
+                    modalProduct: {
+                        contents: {
+                            img: true,
+                            imgWithCarousel: true,
+                            button: false,
+                            buttonWithQuantity: true,
+                        },
+                        text: {
+                            button: 'Ajouter au panier',
+                        },
+                        styles: {
+                            product: {
+                                'padding': '24px',
+                                'background-color': '#111111',
+                                'color': '#f4efe6',
+                            },
+                            button: {
+                                'background-color': '#161616',
+                                'background-image': 'linear-gradient(135deg, rgba(223, 189, 148, 0.26), rgba(223, 189, 148, 0.08))',
+                                'border': '1px solid rgba(255, 223, 189, 0.48)',
+                                'box-shadow': 'none',
+                                'padding': '12px 22px',
+                                'margin-top': '16px',
+                                'border-radius': '0',
+                                'font-family': '"Poppins", sans-serif',
+                                'font-weight': '500',
+                                'letter-spacing': '0.2em',
+                                'text-transform': 'uppercase',
+                                'font-size': '0.75rem',
+                                'color': '#f8f2e7',
+                                ':hover': {
+                                    'background-image': 'linear-gradient(135deg, rgba(228, 198, 161, 0.4), rgba(228, 198, 161, 0.16))',
+                                    'border-color': 'rgba(255, 233, 205, 0.85)',
+                                },
+                                ':focus': {
+                                    'background-image': 'linear-gradient(135deg, rgba(228, 198, 161, 0.4), rgba(228, 198, 161, 0.16))',
+                                    'border-color': 'rgba(255, 233, 205, 0.85)',
+                                },
+                            },
+                        },
+                        classes: {
+                            button: 'collection-card__buy-button',
+                        },
+                    },
+                    cart: {
+                        styles: {
+                            button: {
+                                'background-color': '#d5b892',
+                                'color': '#121212',
+                                'border-radius': '999px',
+                                'padding': '14px 20px',
+                                ':hover': {
+                                    'background-color': '#e2caa9',
+                                },
+                                ':focus': {
+                                    'background-color': '#e2caa9',
+                                },
+                            },
+                            title: {
+                                'color': '#f9f4ea',
+                            },
+                            footer: {
+                                'background-color': '#111111',
+                            },
+                            cart: {
+                                'background-color': '#111111',
+                                'color': '#e8dfd0',
+                            },
+                            quantity: {
+                                'color': '#121212',
+                                'background-color': '#ffffff',
+                                'border-color': 'rgba(255, 223, 189, 0.35)',
+                            },
+                            quantityInput: {
+                                'color': '#121212',
+                                'background-color': '#ffffff',
+                            },
+                            quantityButton: {
+                                'color': '#121212',
+                                'background-color': '#ffffff',
+                            },
+                        },
+                        text: {
+                            title: 'Votre sélection',
+                            total: 'Sous-total',
+                            empty: 'Votre panier est encore vide.',
+                            button: 'Valider la commande',
+                        },
+                    },
+                    toggle: {
+                        styles: {
+                            toggle: {
+                                'background-color': '#191919',
+                                'color': '#f4efe6',
+                                ':hover': {
+                                    'background-color': '#232323',
+                                },
+                                ':focus': {
+                                    'background-color': '#232323',
+                                },
+                            },
+                        },
+                        text: {
+                            title: 'Panier',
+                        },
+                    },
+                };
+
+                const cloneOptions = (object) => JSON.parse(JSON.stringify(object));
+
+                window.ShopifyBuy.UI.onReady(client).then((ui) => {
+                    productMounts.forEach(({ node, productId }) => {
+                        node.dataset.shopifyMount = 'ready';
+                        ui.createComponent('product', {
+                            id: productId,
+                            node,
+                            moneyFormat: '%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D',
+                            options: cloneOptions(baseOptions),
+                        });
+                    });
+                });
+            };
+
+            if (window.ShopifyBuy && window.ShopifyBuy.UI) {
+                initShopify();
+            } else {
+                ensureScript(initShopify);
+            }
+        })();
+    </script>
+
 
     <script>
         const burgerButton = document.querySelector('.burger-button');
         const mobileMenu = document.querySelector('#mobile-menu');
         const pageReveal = document.querySelector('.page-reveal');
+        const discoverButton = document.querySelector('.collection-intro__button');
+        const collectionItemsSection = document.querySelector('#collection-items');
+
+        if (discoverButton && collectionItemsSection) {
+            discoverButton.addEventListener('click', () => {
+                collectionItemsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
 
         if (pageReveal) {
             window.addEventListener('load', () => {
-                const REVEAL_SPIN_DURATION = 1000;
+                const REVEAL_SPIN_DURATION = 400;
                 window.setTimeout(() => {
                     pageReveal.classList.add('is-expanding');
                 }, REVEAL_SPIN_DURATION);
@@ -267,14 +632,74 @@
 
             mobileMenu.addEventListener('click', (event) => {
                 if (event.target.matches('a')) {
+                    const href = event.target.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        const targetId = href.substring(1);
+                        if (targetId === 'top') {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                            const targetElement = document.getElementById(targetId) || document.querySelector(`[aria-labelledby="${targetId}"]`) || document.querySelector(`.${targetId}`);
+                            if (targetElement) {
+                                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }
+                    }
                     setMenuState(false);
                 } else if (event.target === mobileMenu) {
                     setMenuState(false);
                 }
             });
+        }
 
+        // Gestion du scroll smooth pour la navbar desktop
+        const desktopNavbar = document.querySelector('.desktop-navbar');
+        if (desktopNavbar) {
+            desktopNavbar.addEventListener('click', (event) => {
+                if (event.target.matches('a')) {
+                    const href = event.target.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        event.preventDefault();
+                        const targetId = href.substring(1);
+                        if (targetId === 'top') {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                            const targetElement = document.getElementById(targetId) || document.querySelector(`[aria-labelledby="${targetId}"]`) || document.querySelector(`.${targetId}`);
+                            if (targetElement) {
+                                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Gestion du bouton retour en haut (mobile)
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+        if (scrollToTopButton) {
+            const handleScroll = () => {
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.add('is-visible');
+                } else {
+                    scrollToTopButton.classList.remove('is-visible');
+                }
+            };
+
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll(); // Vérifier l'état initial
+        }
+
+        if (burgerButton && mobileMenu) {
             window.addEventListener('resize', () => {
                 if (window.innerWidth > 980 && burgerButton.getAttribute('aria-expanded') === 'true') {
+                    const setMenuState = (open) => {
+                        burgerButton.setAttribute('aria-expanded', String(open));
+                        mobileMenu.hidden = !open;
+                        document.body.classList.toggle('menu-open', open);
+                    };
                     setMenuState(false);
                 }
             });
@@ -314,17 +739,31 @@
             const progressRaw = (scrollY - heroScrollStart) / heroScrollRange;
             const progress = clamp01(progressRaw);
 
-            heroImage.style.setProperty('--hero-shift-progress', progress.toFixed(3));
+            // Détecter si on est sur PC (écran >= 1200px)
+            const isDesktop = window.innerWidth >= 1200;
+
+            if (isDesktop) {
+                // Sur PC : l'image ne bouge pas
+                heroImage.style.setProperty('--hero-shift-progress', '0');
+            } else {
+                // Sur mobile/tablette : comportement normal
+                heroImage.style.setProperty('--hero-shift-progress', progress.toFixed(3));
+            }
 
             if (heroSection) {
                 const logoOpacity = 1 - clamp01(progress * 1.05);
-                const logoShift = `${(progress * 42).toFixed(1)}px`;
+                // Sur PC : le logo descend beaucoup plus (150px au lieu de 42px)
+                const logoShiftMultiplier = isDesktop ? 150 : 42;
+                const logoShift = `${(progress * logoShiftMultiplier).toFixed(1)}px`;
                 heroSection.style.setProperty('--hero-logo-opacity', logoOpacity.toFixed(3));
                 heroSection.style.setProperty('--hero-logo-shift', logoShift);
             }
 
-            const heroHeight = HERO_BASE_HEIGHT - HERO_HEIGHT_DELTA * progress;
-            heroSection.style.setProperty('--hero-height', `${heroHeight.toFixed(2)}vh`);
+            // Sur PC, la hauteur reste à 100vh (géré par CSS)
+            if (!isDesktop) {
+                const heroHeight = HERO_BASE_HEIGHT - HERO_HEIGHT_DELTA * progress;
+                heroSection.style.setProperty('--hero-height', `${heroHeight.toFixed(2)}vh`);
+            }
 
             heroTicking = false;
         };
